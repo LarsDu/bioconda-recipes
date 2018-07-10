@@ -1,0 +1,29 @@
+{% set name = "PlaScope" %}
+{% set version = "1.2" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/GuilhemRoyer/{{ name|lower }}/archive/{{ version }}.tar.gz
+  sha256: 661362c8dbb9608ce69a976ffeb0676b4cb016b308e3edcebb71128cea35eabe
+
+build:
+  number: 0
+
+requirements:
+  run:
+    - spades >=3.10.1
+    - centrifuge ==1.0.3
+
+about:
+  home: https://github.com/GuilhemRoyer/{{ name }}
+  license: GPL (>=3)
+  license_family: GPL
+  summary: PlaScope is a targeted approach to assess the plasmidome of bacteria.
+
+test:
+  commands:
+    - plaScope.sh --version
+
