@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd src/
-
 install -m 755 plaScope.sh $PREFIX/bin
 SHARE_DIR=$PREFIX/share/$PKG_NAME-$PKG_VERSION-$PKG_BUILDNUM
 DOC_DIR=$SHARE_DIR/doc
